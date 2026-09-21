@@ -1,0 +1,5 @@
+.env
+*.pem
+*.key
+*.log
+.DS_Store

@@ -1,0 +1,35 @@
+services:
+
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    container_name: nginx-lb
+    ports:
+      - "80:80"
+    depends_on:
+      - backend1
+      - backend2
+      - backend3
+    restart: unless-stopped
+
+  backend1:
+    image: ghcr.io/benc-uk/python-demoapp:latest
+    container_name: backend1
+    expose:
+      - "5000"
+    restart: unless-stopped
+
+  backend2:
+    image: ghcr.io/benc-uk/python-demoapp:latest
+    container_name: backend2
+    expose:
+      - "5000"
+    restart: unless-stopped
+
+  backend3:
+    image: ghcr.io/benc-uk/python-demoapp:latest
+    container_name: backend3
+    expose:
+      - "5000"
+    restart: unless-stopped
