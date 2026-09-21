@@ -81,19 +81,15 @@ Docker-Nginx-Load-Balancer/
 │   ├── Dockerfile
 │   └── nginx.conf
 │
-├── architecture/
-│   └── architecture-diagram.png
+├── architecture-diagram.png
+│ 
 │
 ├── screenshots/
 │   ├── docker-compose-ps.png
 │   ├── docker-images.png
 │   ├── docker-ps.png
 │   └── nginx-test.png
-│
-└── docs/
-    ├── installation.md
-    ├── nginx.md
-    └── troubleshooting.md
+
 🐳 Docker Services
 Container	Internal Port	Purpose
 nginx-lb	80	Load balancer / reverse proxy
